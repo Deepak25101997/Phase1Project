@@ -28,7 +28,7 @@ public class FileDaoImpl implements FileDao {
 			fileMap.remove(name);
 		}
 		else {
-			throw new FileException("Deletion Failed. File Not Found !");
+			throw new FileException("\n\nDeletion Failed. File Not Found !");
 		}
 	}
 
@@ -36,7 +36,7 @@ public class FileDaoImpl implements FileDao {
 	public List<String> getAllFilesNameInAsc() throws FileException {
 		
 		if(fileMap.size()==0) {
-			throw new FileException("No files exist currently ! Please add a file.");
+			throw new FileException("\n\nNo files exist currently ! Please add a file.");
 		}
 
 		List<String> fileNames= new ArrayList<>(fileMap.keySet());
@@ -51,14 +51,14 @@ public class FileDaoImpl implements FileDao {
 			return fileMap.get(name);
 		}
 		else {
-			throw new FileException("Deletion Failed. File Not Found !");
+			throw new FileException("\n\nDeletion Failed. File Not Found !");
 		}
 	}
 
 	@Override
 	public List<FileModel> getAllFilesWithDetails() throws FileException {
 		if(fileMap.size()==0) {
-			throw new FileException("No files exist currently ! Please add a file.");
+			throw new FileException("\n\nNo files exist currently ! Please add a file.");
 		}
 		
 		return new ArrayList<>(fileMap.values());

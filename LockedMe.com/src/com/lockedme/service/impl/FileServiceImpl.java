@@ -17,11 +17,11 @@ public class FileServiceImpl implements FileService {
 
 		if (!isValidName(file.getName())) {
 			throw new FileException(
-					"Please Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
+					"\n\nPlease Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
 		}
 
 		if (!isValidContent(file.getContent())) {
-			throw new FileException("Please Enter content on the range 5-1000 characters only !");
+			throw new FileException("\n\nPlease Enter content on the range 5-1000 characters only !");
 		}
 
 		return dao.addFile(file);
@@ -47,7 +47,7 @@ public class FileServiceImpl implements FileService {
 	public void deleteFile(String name) throws FileException {
 		if (!isValidName(name)) {
 			throw new FileException(
-					"Invalid Input. Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
+					"\n\nInvalid Input. Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
 		}
 
 		dao.deleteFile(name);
@@ -64,7 +64,7 @@ public class FileServiceImpl implements FileService {
 
 		if (isValidName(name)) {
 			throw new FileException(
-					"Invalid Input. Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
+					"\n\nInvalid Input. Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
 		}
 
 		return dao.searchFile(name);
