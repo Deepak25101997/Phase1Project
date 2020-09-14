@@ -115,7 +115,7 @@ public class FileMain {
 						try {
 							FileModel fModel2 = new FileModel();
 							fModel2 = myService.searchFile(name2);
-							System.out.println("\nFile Name " + fModel2.getName() + "found !");
+							System.out.println("\nFile Name " + fModel2.getName() + " found !");
 						} catch (FileException e) {
 							System.out.println(e.getMessage());
 						}

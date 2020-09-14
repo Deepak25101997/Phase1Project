@@ -66,7 +66,7 @@ public class FileServiceImpl implements FileService {
 	@Override
 	public FileModel searchFile(String name) throws FileException {
 
-		if (isValidName(name)) {
+		if (!isValidName(name)) {
 			throw new FileException(
 					"\n\nInvalid Input. Enter File Name (alphanumeric, hyphen and underscore allowed) in range 5-20 characters !");
 		}
