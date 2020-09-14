@@ -72,7 +72,7 @@ public class FileMain {
 					System.out.println("2) Delete a file");
 					System.out.println("3) Search a file ");
 					System.out.println("4) View all files with details");
-					System.out.println("5) Exit");
+					System.out.println("5) Return to main menu");
 					System.out.println("=============================");
 
 					iCh = Integer.parseInt(scanner.nextLine());
