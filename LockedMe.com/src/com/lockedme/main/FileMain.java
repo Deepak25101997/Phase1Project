@@ -15,12 +15,14 @@ public class FileMain {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 
+		//Application and developer details	
 		System.out.println("Welcome to LockedMe APP V1.0.1 - One Stop Solution for Files Management !");
 		System.out.println("--------------------------------");
 		System.out.println("Developed By : Deepak Kumar");
 		System.out.println("Email - deepak.kumar@prolim.com");
 		System.out.println("--------------------------------");
 
+		//variable for choice1
 		int ch = 0;
 
 		Scanner scanner = new Scanner(System.in);
@@ -61,7 +63,7 @@ public class FileMain {
 				break;
 
 			case 2:
-
+				//variable for choice 2
 				int iCh = 0;
 				do {
 					System.out.println("\n\nSelect Operation to perform");

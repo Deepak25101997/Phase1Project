@@ -1,5 +1,6 @@
 package com.lockedme.model;
 
+//defining the File model with various fields
 public class FileModel {
 
 	private String name;
@@ -36,6 +37,7 @@ public class FileModel {
 	public String toString() {
 		return "FileModel [name=" + name + ", content=" + content + ", dateOfCreation=" + dateOfCreation + "]";
 	}
+	
 	
 	public int compareTo(FileModel f)
 	{

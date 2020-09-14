@@ -27,6 +27,8 @@ public class FileServiceImpl implements FileService {
 		return dao.addFile(file);
 	}
 
+	
+	//only alphanumeric, underscore and hyphen allowed with range of 5-20 characters
 	private boolean isValidName(String name) {
 		boolean b = false;
 		if (name.trim().matches("[a-zA-Z0-9_-]{5,20}")) {
@@ -35,6 +37,8 @@ public class FileServiceImpl implements FileService {
 		return b;
 	}
 
+	
+	//to check the content length. Length must be in range of 5-1000 characters
 	private boolean isValidContent(String content) {
 		boolean b = false;
 		if (content.length() > 5 && content.length() < 1000) {
