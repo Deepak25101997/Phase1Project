@@ -1,6 +1,7 @@
 package com.lockedme.dao.impl;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,6 +41,8 @@ public class FileDaoImpl implements FileDao {
 		}
 
 		List<String> fileNames= new ArrayList<>(fileMap.keySet());
+		
+		Collections.sort(fileNames);
 		
 		return fileNames;
 	
